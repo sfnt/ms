@@ -2,6 +2,8 @@
 
 class SiteController extends Controller
 {
+    public $layout = 'mg';
+    public $params = array();
 	/**
 	 * Declares class-based actions.
 	 */

@@ -1,0 +1,123 @@
+h1,h2,h3,h4{
+	font-size:16px;
+	font-weight:bold;
+}
+.wrapper{
+	
+}
+.main-list .list{
+	padding:0;
+}
+.topbg{
+	width:100%;
+	height:222px; 
+	background:url(../images/new/top-bg1.jpg) top center no-repeat; 
+	position:absolute; 
+	top:0px; 
+	z-index:-999;
+}
+.centerDiv {
+	width:990px;
+}
+#member_nav,#member_nav a{
+	color:#000;
+}
+
+.dot_bottom{
+	background:url(../images/new/dt_line.gif) repeat-x scroll center bottom transparent;
+	padding-bottom:10px;
+}
+.dot_top{
+	background:url(../images/new/dt_line.gif) repeat-x scroll center top transparent;
+	padding-top:10px;
+}
+.h-ul{
+	margin:0px;
+	padding:0px;
+	float:left;
+}
+.h-ul li{
+	margin:0;
+	padding:0;
+	float:left;
+	list-style-type:none;
+}
+.main-nav{
+	height:40px; 
+	background:url(../images/new/main-nav-bg.gif) repeat-x #a4c681;
+}
+.main-nav ul li{
+	margin:0 1px;
+	text-align:center;
+	width:152px;
+	line-height:40px;
+	font-size:18px;
+	background:url(../images/new/top-nav-bg.gif) repeat-x;
+}
+.main-nav ul li a{
+	display:block;
+	color:#000;
+	text-decoration:none;
+}
+.main-nav ul li a:hover{
+	text-decoration:none;
+}
+.main-nav ul li.over{
+	background:#dde9ca;
+	border-right:1px solid #a4c681;
+	border-left:1px solid #a4c681;
+	margin-right:0px;
+	margin-left:0px;
+}
+.main-nav ul li.current{
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+	border-image: none;
+    border-left: 1px solid;
+    border-radius: 3px 3px 0 0;
+    border-right: 1px solid;
+    border-style: solid;
+    border-top: 1px solid;
+    border-width: 1px;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+	font-weight:bold;
+	background:url(../images/new/top-nav-selected-bg.gif) repeat-x #fff;
+	padding-top:4px;
+	margin:-5px 1px -1px;
+	border:1px solid #a4c681;
+	border-bottom:none;
+}
+.main-nav ul li.current a{
+	color:#62934f;
+}
+
+.subnav{
+	background:#dde9ca; 
+	height:24px;
+	line-height:24px;
+	display:none;
+}
+.subnav ul{
+	padding-left:30px;
+}
+.subnav ul li{
+	width:100px;
+	text-align:center;
+}
+.subnav ul li a{
+	display:block;
+}
+.subnav ul li.over, .subnav ul li.current{
+	background:#7fba6a;
+}
+
+.subnav ul li.over a,.subnav ul li.over a:hover,.subnav ul li.current a,.subnav ul li.current a:hover {
+	color:#fff;
+}
+.subnav a,.subnav a:hover{
+	text-decoration:none;
+	color:#000
+}

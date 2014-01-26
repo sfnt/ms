@@ -1,0 +1,34 @@
+.footer_box{
+	background:#eeefe9;
+}
+.foot_link_list{
+	text-align:left;
+}
+.foot_link_list h1{
+	margin:0;
+}
+.foot_link_list ul{
+	margin: 0;
+    padding: 0;
+}
+.foot_link_list ul.tow{
+	width:280px;
+}
+.foot_link_list ul.one{
+	width:155px;
+}
+.foot_link_list ul li{
+	float:left;
+	width:125px;
+	list-style-position: inside;
+}
+.footer_hr{
+	height:1px;
+	color:#d6d1cd; 
+	width:90%;
+}
+.footer_copy{
+	padding:0px 50px;
+	/*text-align:right;
+	*/
+}

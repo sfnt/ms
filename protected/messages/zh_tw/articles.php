@@ -1,0 +1,57 @@
+<?php
+return array(
+    'Category name'=>'欄目名稱',
+    'Template'=>'範本',
+    'Content template'=>'內容範本',
+    'Category level'=>'欄目層級',
+    'Root category'=>'根欄目',
+    'Parent category'=>'父欄目',
+    'With list'=>'包含列表',
+    'publish time'=>'發佈時間',
+    'link url'=>'連結網址',
+    'Content'=>'內容',
+    'Need Login'=>'需要登錄',
+    
+    'Title'=>'標題',
+    'Short Title'=>'短標題',
+    'Title Color'=>'標題顏色',
+    'Author'=>'作者',
+    'From'=>'來源',
+    'Click Num'=>'閱讀次數',
+    'Sell Price'=>'售價',
+    'Flag'=>'屬性',
+    'With Picture'=>'包含圖片',
+    'Picture Path'=>'圖片位址',
+    'Poster'=>'發佈人',
+    'Editor'=>'編輯',
+    'Keywords'=>'關鍵字',
+    'Description'=>'描述',
+    'File Name'=>'檔案名稱',
+    'Is Redirect'=>'是否跳轉',
+    'Redirect URL'=>'跳轉網址',
+    'Category'=>'欄目',
+    
+    'Add subcategory'=>'添加子欄目',
+    'All categories'=>'全部欄目',
+    'Select category'=>'請選擇欄目',
+    'Select Color'=>'選擇顏色',
+    
+    'Top'=>'置頂',
+    'Hot'=>'熱點',
+    'Picture'=>'圖片',
+    'Commend'=>'推薦',
+    'Bold'=>'加粗',
+    'Redirect'=>'跳轉',
+    'Marquee'=>'滾動',
+    
+    'This category have one or more subcategories, please remove all subcategories before delete.'=>'該欄目包含子欄目，刪除前請先移除所有子欄目。',
+    "Make the parent of one category to be itself is not allowed!"=>'父欄目不能設為自身！',
+    
+    'Draft'=>'草稿',
+    'Submitted'=>'已提交',
+    'Published'=>'已發表',
+    'Returned'=>'被退回',
+    'Deleted'=>'已刪除',
+
+);
+?>

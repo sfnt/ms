@@ -8,8 +8,10 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
     'sourceLanguage'=>'en',
-    'language'=>'zh_cn',
-	'name'=>Yii::t('system','Meeting System'),
+    'language'=>'zh_tw',
+	'name'=>'Moneygod',
+	'timeZone'=>'Asia/Taipei',
+	'defaultController'=>'moneygod',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -17,7 +19,6 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
-        'application.models.met.*',
 		'application.models.forms.*',
 		'application.components.*',
 	),
@@ -27,7 +28,7 @@ return array(
 		'management'=>array(
 			'ipFilters'=>array(),
 		),
-        'articles','metManage','frontUsers',
+        'articles','frontUsers',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'111',
@@ -47,6 +48,7 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
+				''=>'moneygod/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
@@ -54,12 +56,12 @@ return array(
 		),
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=ms_sfnt',
+			'connectionString' => 'mysql:host=localhost;dbname=mg_new',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '123456',
 			'charset' => 'utf8',
-            'tablePrefix'=>'sfnt_',
+            'tablePrefix'=>'mg_',
 		),
 
 		'errorHandler'=>array(
@@ -104,10 +106,10 @@ return array(
 		'saltlenght'=>4,
         'su' => array(1),
         
-        'upload_dir' => 'userfiles',
+        'upload_dir' => '/userfiles',
         'upload_img_max_width' => 1024,
         'upload_img_max_height' => 1024,
         
-        'use_uc'=>false,
+        'use_uc'=>true,
 	),
 );

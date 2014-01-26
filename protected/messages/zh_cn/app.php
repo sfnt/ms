@@ -1,5 +1,5 @@
 <?php
 return array(
-    'Meeting System'=>'会议管理系统',
+    'Moneygod'=>'龙德寺',
 );
 ?>

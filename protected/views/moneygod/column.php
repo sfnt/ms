@@ -1,5 +1,6 @@
 <?php
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/mg/css/new_list.css');
+Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/mg/css/moneygod.css','screen');
+Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/mg/css/new_list.css','screen');
 ?>
 <div class="centerDiv" style="margin-top:5px;">
 	<div class="list_main">
@@ -31,24 +32,12 @@ if(isset($this->params['columnid'])){
     //
     $criteria->params=array(':columnid'=>$column->id); 
     
-    $thisColumnTree = Column::getArrayTree($column->id);
-    //print_r($thisColumnTree);
-    if(isset($thisColumnTree['child'])){
-        $childIds = '';
-        foreach($thisColumnTree['child'] as $key=>$v){
-            if($v['publish_status']!=1)
-            {
-                continue;
-            }
-            if($childIds!=''){
-                $childIds.=',';
-            }
-            $childIds .= $key;
-        }
-        if($childIds){
-            $criteria->condition .= ' OR (columnid in ('.$childIds.'))';
-            $criteria->with=array('column');
-        }
+    
+    $childIds = Column::getChildIds($column->id);
+
+    if($childIds){
+        $criteria->condition .= ' OR (columnid in ('.$childIds.'))';
+        $criteria->with=array('column');
     }
     
     $criteria->order='t.publishtime DESC,t.id ASC';  
@@ -85,4 +74,25 @@ if(isset($this->params['columnid'])){
 ?>
         
     </div>
+    <div class="list_right tab_box_content main-list">
+		<div class="title">
+			<h1>本月最多點閱</h1>
+		</div>
+		<div class="list">
+        <?php $this->widget(
+                        'ext.ArcListWidget',
+                        array(
+                            'columnId'=>$column->id,
+                            'length'=>16,
+                            'limit'=>'14',
+                            'subDay'=>'30',
+                            'showSub'=>true,
+                            'orderBy'=>'click_num DESC, publishtime DESC',
+                            'actionPath'=>'/moneygod/article',
+                            'categoryPath'=>'/moneygod/category',
+                            'linkHtmlOptions'=>array('target'=>'_blank'),
+                            )
+                        ); ?>
+        </div>
+	</div>
  </div>

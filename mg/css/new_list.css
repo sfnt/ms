@@ -1,0 +1,31 @@
+.list_main{
+	float:left;
+	width:720px;
+}
+.list_right{
+	float:right;
+	width:250px;
+	padding-left:10px;
+	border-left: 1px solid #eeefe9;
+}
+.list_right .title{
+	/*
+	border-top: 2px solid #145FBB;
+	*/
+}
+.main-list .list{
+	background:none;
+}
+.tab_box_content .list{
+	background:url(../images/new/dt_line.gif) repeat-x scroll center top transparent;
+	padding:12px 0;
+}
+.list_main .position{
+	/*
+	border-top: 2px solid #145FBB; 
+	*/
+	background: #dde9ca; 
+	line-height: 28px; 
+	padding: 5px 10px; 
+	margin-bottom: 12px;
+}
